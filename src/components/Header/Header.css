@@ -1,0 +1,10 @@
+.navButton {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.navButton:hover {
+  text-decoration: none;
+}
