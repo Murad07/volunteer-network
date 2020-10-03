@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../logos/brandLogo.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   return (
-    <div>
-      <Navbar bg='light' expand='lg'>
+    <Container>
+      <Navbar expand='lg'>
         <Navbar.Brand href='#home'>
           <img
             src={logo}
@@ -38,7 +38,7 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </div>
+    </Container>
   );
 };
 

@@ -1,0 +1,24 @@
+.ship-form {
+  width: 400px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.ship-form input {
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error {
+  color: red;
+}

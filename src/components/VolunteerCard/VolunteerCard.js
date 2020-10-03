@@ -1,16 +1,25 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './VCard.css';
 
 const VolunteerCard = (props) => {
-  const { title, img } = props.volunteer;
+  const { _id, title, img } = props.volunteer;
   return (
     <Col xs={3}>
-      <Card style={{ width: '15rem' }} className='pl-1 mt-5'>
-        <Card.Img variant='top' src={require('../../images/' + img)} />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-        </Card.Body>
-      </Card>
+      <Link className='cardLink' to={`/register/${title}`}>
+        <Card
+          style={{
+            width: '15rem',
+          }}
+          className=' mt-5'
+        >
+          <Card.Img variant='top' src={require('../../images/' + img)} />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+          </Card.Body>
+        </Card>
+      </Link>
     </Col>
   );
 };

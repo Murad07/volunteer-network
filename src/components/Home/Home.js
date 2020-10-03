@@ -1,15 +1,38 @@
-import React, { useState } from 'react';
-import { Container, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
-import Header from '../Header/Header';
+import React, { useEffect, useState } from 'react';
+import {
+  Button,
+  Container,
+  Form,
+  FormControl,
+  InputGroup,
+  Row,
+} from 'react-bootstrap';
 import VolunteerCard from '../VolunteerCard/VolunteerCard';
 import fakeData from './../../fakeData/index';
 
 const Home = () => {
-  const [volunteers, setVolunteers] = useState(fakeData);
+  const [volunteers, setVolunteers] = useState([]);
+
+  //   const handleAddVolunteer = () => {
+  //     fetch('http://localhost:5000/addVolunteer', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(fakeData),
+  //     });
+  //   };
+
+  useEffect(() => {
+    fetch('http://localhost:5000/volunteers')
+      .then((res) => res.json())
+      .then((data) => setVolunteers(data));
+  }, []);
+
   return (
     <div>
       <Container>
-        <Header></Header>
+        {/* <Button onClick={handleAddVolunteer}> Add Volunteer </Button> */}
 
         <h3 className='text-center mt-5'>
           I GROW BY HELPING PEOPLE IN NEEDED.
@@ -36,7 +59,7 @@ const Home = () => {
         <Row>
           {volunteers.map((volunteer) => (
             <VolunteerCard
-              key={volunteer.id}
+              key={volunteer._id}
               volunteer={volunteer}
             ></VolunteerCard>
           ))}
