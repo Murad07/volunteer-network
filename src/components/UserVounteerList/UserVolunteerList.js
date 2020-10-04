@@ -15,17 +15,18 @@ const UserVolunteerList = () => {
       .then((data) => setUserVolunteerList(data));
   }, []);
 
-  console.log(userVolunteerList);
   return (
-    <Container>
-      <Row>
-        {userVolunteerList.length &&
-          userVolunteerList.map((singleCard) => (
-            <SingleVolunteer
-              key={singleCard._id}
-              info={singleCard}
-            ></SingleVolunteer>
-          ))}
+    <Container
+      style={{ backgroundColor: '#f8fafc', minHeight: '500px' }}
+      className='px-5'
+    >
+      <Row className='pb-4'>
+        {userVolunteerList.map((singleCard) => (
+          <SingleVolunteer
+            key={singleCard._id}
+            info={singleCard}
+          ></SingleVolunteer>
+        ))}
       </Row>
     </Container>
   );

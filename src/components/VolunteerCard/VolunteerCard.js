@@ -7,7 +7,7 @@ const VolunteerCard = (props) => {
   const { _id, title, img } = props.volunteer;
   return (
     <Col xs={3}>
-      <Link className='cardLink' to={`/register/${title}`}>
+      <Link className='cardLink' to={`/register/${_id}`}>
         <Card
           style={{
             width: '15rem',

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Register.css';
 import logo from '../../logos/brandLogo.png';
@@ -8,12 +8,19 @@ import { useForm } from 'react-hook-form';
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
-  let { title } = useParams();
+  let { id } = useParams();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
-  const onSubmit = (data) => {
-    console.log('form submit', data);
+  const [volunteers, setVolunteers] = useState([]);
+  const history = useHistory();
 
+  useEffect(() => {
+    fetch('http://localhost:5000/volunteers/' + id)
+      .then((res) => res.json())
+      .then((data) => setVolunteers(data));
+  }, []);
+
+  const onSubmit = (data) => {
     fetch('http://localhost:5000/addRegister', {
       method: 'POST',
       headers: {
@@ -24,8 +31,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          //   processOrder();
-          alert('order placed successfully');
+          history.push('/userVolunteerList');
         }
       });
   };
@@ -75,7 +81,15 @@ const Register = () => {
           name='volunteerTitle'
           ref={register({ required: true })}
           placeholder='Volunteer Title'
-          defaultValue={title}
+          defaultValue={volunteers.title}
+        />
+
+        <input
+          hidden
+          name='img'
+          ref={register({ required: true })}
+          placeholder='Image'
+          defaultValue={volunteers.img}
         />
 
         <input

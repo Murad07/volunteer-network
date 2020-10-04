@@ -8,6 +8,7 @@ import Register from './components/Register/Register';
 import Header from './components/Header/Header';
 import UserVolunteerList from './components/UserVounteerList/UserVolunteerList';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import RedirectDelete from './components/RedirectDelete/RedirectDelete';
 
 export const UserContext = createContext();
 
@@ -30,12 +31,16 @@ function App() {
             <Login />
           </Route>
 
-          <PrivateRoute path='/register/:title'>
+          <PrivateRoute path='/register/:id'>
             <Register></Register>
           </PrivateRoute>
 
           <PrivateRoute path='/userVolunteerList'>
             <UserVolunteerList></UserVolunteerList>
+          </PrivateRoute>
+
+          <PrivateRoute path='/redirectDelete'>
+            <RedirectDelete></RedirectDelete>
           </PrivateRoute>
 
           <Route exact path='/'>
