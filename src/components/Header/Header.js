@@ -22,10 +22,10 @@ const Header = () => {
             <Link className='navButton' to='/home'>
               Home
             </Link>
-            <Link className='navButton' to='/'>
+            <Link className='navButton' to='/login'>
               Donation
             </Link>
-            <Link className='navButton' to='/login'>
+            <Link className='navButton' to='/userVolunteerList'>
               Events
             </Link>
             <Link className='navButton' to='/'>

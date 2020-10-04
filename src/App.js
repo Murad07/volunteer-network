@@ -6,6 +6,8 @@ import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
 import Header from './components/Header/Header';
+import UserVolunteerList from './components/UserVounteerList/UserVolunteerList';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -23,12 +25,19 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+
           <Route path='/login'>
             <Login />
           </Route>
-          <Route path='/register/:title'>
+
+          <PrivateRoute path='/register/:title'>
             <Register></Register>
-          </Route>
+          </PrivateRoute>
+
+          <PrivateRoute path='/userVolunteerList'>
+            <UserVolunteerList></UserVolunteerList>
+          </PrivateRoute>
+
           <Route exact path='/'>
             <Home />
           </Route>

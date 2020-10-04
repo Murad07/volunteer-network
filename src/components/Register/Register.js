@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Register.css';
@@ -7,7 +7,7 @@ import logo from '../../logos/brandLogo.png';
 import { useForm } from 'react-hook-form';
 
 const Register = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   let { title } = useParams();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
@@ -43,7 +43,7 @@ const Register = () => {
         </Col>
       </Row>
 
-      <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
+      <form className='register-form' onSubmit={handleSubmit(onSubmit)}>
         <h4 className='text-center'>Register as a Volunteer</h4>
         <input
           name='name'

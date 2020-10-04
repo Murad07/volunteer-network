@@ -1,4 +1,4 @@
-.ship-form {
+.register-form {
   width: 400px;
   border: 1px solid gray;
   border-radius: 5px;
@@ -8,7 +8,7 @@
   background-color: white;
 }
 
-.ship-form input {
+.register-form input {
   display: block;
   margin-top: 20px;
   padding: 5px;
