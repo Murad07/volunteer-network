@@ -1,11 +1,12 @@
 .navButton {
   text-decoration: none;
   color: black;
-  padding-right: 20px;
-  margin-right: 20px;
   padding-top: 5px;
+  padding-right: 0;
+  font-size: 14px;
 }
 
 .navButton:hover {
   text-decoration: none;
+  color: blue;
 }

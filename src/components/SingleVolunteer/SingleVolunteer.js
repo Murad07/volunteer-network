@@ -8,7 +8,7 @@ const SingleVolunteer = (props) => {
   const history = useHistory();
 
   const handleCancle = () => {
-    fetch(`http://localhost:5000/delete/${_id}`, {
+    fetch(`https://cryptic-inlet-22709.herokuapp.com/delete/${_id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())
@@ -20,7 +20,7 @@ const SingleVolunteer = (props) => {
   };
 
   return (
-    <Col xs={6}>
+    <Col xs={6} sm={12}>
       <div className='registerCard px-2 mt-4 py-2'>
         <Row>
           <Col xs={4}>

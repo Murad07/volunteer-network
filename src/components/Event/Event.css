@@ -1,0 +1,32 @@
+.eventForm {
+  box-shadow: 5px 5px 10px lightgray;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+}
+
+.formWidth {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+.eventForm input,
+textarea {
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submitBtn {
+  border: none;
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+}

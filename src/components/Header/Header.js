@@ -31,10 +31,14 @@ const Header = () => {
             <Link className='navButton' to='/'>
               Blog
             </Link>
-            <Button className='mr-2' variant='primary'>
-              Register
-            </Button>
-            <Button variant='dark'>Admin</Button>
+            <Link to='/login'>
+              <Button className='mr-2' variant='primary'>
+                Register
+              </Button>
+            </Link>
+            <Link to='/admin'>
+              <Button variant='dark'>Admin</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -6,7 +6,7 @@ import './VCard.css';
 const VolunteerCard = (props) => {
   const { _id, title, img } = props.volunteer;
   return (
-    <Col xs={3}>
+    <Col xs={3} sm={12}>
       <Link className='cardLink' to={`/register/${_id}`}>
         <Card
           style={{

@@ -9,6 +9,10 @@ import Header from './components/Header/Header';
 import UserVolunteerList from './components/UserVounteerList/UserVolunteerList';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import RedirectDelete from './components/RedirectDelete/RedirectDelete';
+import Admin from './components/Admin/Admin';
+import AllVolunteerList from './components/AllVolunteerList/AllVolunteerList';
+import DeleteByAdmin from './components/RedirectDelete/DeleteByAdmin';
+import Event from './components/Event/Event';
 
 export const UserContext = createContext();
 
@@ -23,6 +27,10 @@ function App() {
       <Router>
         <Header></Header>
         <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+
           <Route path='/home'>
             <Home />
           </Route>
@@ -43,8 +51,20 @@ function App() {
             <RedirectDelete></RedirectDelete>
           </PrivateRoute>
 
-          <Route exact path='/'>
-            <Home />
+          <Route path='/admin'>
+            <Admin></Admin>
+          </Route>
+
+          <Route path='/allVounteerList'>
+            <AllVolunteerList></AllVolunteerList>
+          </Route>
+
+          <Route to='/deletByAdmin'>
+            <DeleteByAdmin></DeleteByAdmin>
+          </Route>
+
+          <Route path='/event'>
+            <Event></Event>
           </Route>
 
           <Route path='*'>

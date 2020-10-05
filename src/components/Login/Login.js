@@ -47,24 +47,6 @@ const Login = () => {
       });
   };
 
-  const signOut = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then((res) => {
-        const signOutUser = {
-          isSignIn: false,
-          name: '',
-          email: '',
-        };
-        setUser(signOutUser);
-        setLoggedInUser(signOutUser);
-      })
-      .catch((err) => {
-        // An error happened.
-      });
-  };
-
   return (
     <Container style={{ backgroundColor: '#f8fafc', height: '560px' }}>
       <Row className='justify-content-md-center'>

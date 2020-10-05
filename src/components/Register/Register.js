@@ -15,13 +15,13 @@ const Register = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch('http://localhost:5000/volunteers/' + id)
+    fetch('https://cryptic-inlet-22709.herokuapp.com/volunteers/' + id)
       .then((res) => res.json())
       .then((data) => setVolunteers(data));
   }, []);
 
   const onSubmit = (data) => {
-    fetch('http://localhost:5000/addRegister', {
+    fetch('https://cryptic-inlet-22709.herokuapp.com/addRegister', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

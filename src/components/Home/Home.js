@@ -14,7 +14,7 @@ const Home = () => {
   const [volunteers, setVolunteers] = useState([]);
 
   //   const handleAddVolunteer = () => {
-  //     fetch('http://localhost:5000/addVolunteer', {
+  //     fetch('https://cryptic-inlet-22709.herokuapp.com/addVolunteer', {
   //       method: 'POST',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const Home = () => {
   //   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/volunteers')
+    fetch('https://cryptic-inlet-22709.herokuapp.com/volunteers')
       .then((res) => res.json())
       .then((data) => setVolunteers(data));
   }, []);
