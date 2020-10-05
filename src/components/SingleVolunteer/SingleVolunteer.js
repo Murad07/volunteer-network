@@ -20,7 +20,7 @@ const SingleVolunteer = (props) => {
   };
 
   return (
-    <Col xs={6} sm={12}>
+    <Col xs={6}>
       <div className='registerCard px-2 mt-4 py-2'>
         <Row>
           <Col xs={4}>
