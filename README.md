@@ -3,7 +3,10 @@ Live Site:https://volunteer-network-m.web.app/
 
 ### Features:
 -	Make a home page with all volunteer services, fetch all data from the database.
--	Users can participate in a volunteer activity by Sign In and manage his/her activity.
+- Firebase auth login system.
+-	Users can participate in a volunteer activity by Sign In.
+- Volunteer activity cancel option.
+- Admin panel to manage admin responsibility.
 -	Admin is able to add new volunteer services and manage User activity.
 
 ### Frontend:
@@ -12,6 +15,9 @@ HTML, CSS, Bootstrap, React Js, React Spring, React Router, JWT token, firebase.
 ### Backend:
 Node Js, Express Js.
 Database: MongoDB.
+
+### Tools:
+- Vs Code, React Developer tool, Heroku, Adobe Photoshop.
 
 ### My Resume:
 https://drive.google.com/file/d/1W6qKPLEH2_wgVAi7cIFDV2ZrOXNLSKh-/view?usp=sharing
